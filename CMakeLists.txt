@@ -33,6 +33,8 @@ ament_vendor(libcaer_vendor
   VCS_VERSION 3.3.15
   GLOBAL_HOOK
   PATCHES patches
+  CMAKE_ARGS
+    "-DCMAKE_C_FLAGS=-Wno-address-of-packed-member -Wno-sign-conversion -Wno-format-truncation -Wno-unused-parameter -Wno-conversion -Wp,-w"
 )
 
 ament_package(
